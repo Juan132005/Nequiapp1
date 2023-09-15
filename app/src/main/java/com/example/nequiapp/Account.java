@@ -7,6 +7,8 @@ public class Account {
     private String name;
     private String typeAccount;
 
+    private Double currentValue;
+    private String imageUrl;
     public String getName() {
         return name;
     }
@@ -19,17 +21,26 @@ public class Account {
         return currentValue;
     }
 
-    private Double currentValue;
+
+
+    public String getImageUrl() {
+        return imageUrl;
+    }
+    public Account(String name, String typeAccount,  Double currentValue,String imageUrl) {
+        this.name = name;
+        this.typeAccount = typeAccount;
+        this.currentValue = currentValue;
+        this.imageUrl = imageUrl;
+    }
+    public void setImageUrl(String imageUrl) {
+        this.imageUrl = imageUrl;
+    }
 
     public void setName(String name) {
         this.name = name;
     }
 
-    public Account(String name, String typeAccount, Double currentValue) {
-        this.name = name;
-        this.typeAccount = typeAccount;
-        this.currentValue = currentValue;
-    }
+
 
     public void setTypeAccount(String typeAccount) {
         this.typeAccount = typeAccount;
